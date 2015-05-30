@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+
+
+    <title>A Pen by  Erica</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body>
+    <h1>Intro to Programming Notes</h1>
+      <div class="lessons">
+        <h2>HTML Basics and the Web</h2>
+          <p>
+            The web is a collection of HTML documents. HTML stands for Hyper Text Markup Language and makes up
+            basically every page on the web, approximately 30 billion webpages. Hyperlinks between pages makes the web, weblike.
+        </p>
+        <p>
+          To access the web, your computer's browser makes requests via the Internet to Servers, which are computers designed to host files,
+          using a protocol called HTTP. Servers respond with files that your browser displays as web pages.
+          HTML is made up of:
+            <ul>
+              <li>Text Content which you can see</li>
+              <li>Markup which is the HTML language
+                <ul>
+                  <li>It is important to note that "computer's are stupid". That is computer's are only able to interpret instructions literally.</li>
+                </ul>
+              </li>
+              <li> References to other images and videos</li>
+              <li> Links to other pages</li>
+            </ul>
+        </p>  
+      </div>
+      
+      <div class="lessons">
+        <h2>HTML Tags, Elements, and Attributes</h2>
+          <p>
+            HTML <em>Markup</em> is made up of things called <em>Tags.</em> An HTML tag is always contained within angled brackets.
+            Most tags have an opening tag &ltp&gt for example and a closing tag, &lt/p&gt. Some tags (called "void" tags) 
+            do not require a closing tag, like the &ltbr&gt tag. Tags can either be <em>Inline</em> or <em>Block.</em> Inline tags 
+            only modify whatever is in the same line as it. Block tags however create an invisible box and affect whatever is contained in it.
+            More on this later.
+          </p>
+          <p>
+            An <em>Element</em> refers to everything within a set of opening and closing tags.
+          </p>
+          <p>
+            Memorizing all the tags there are in HTML is impossible so it is important to remember to utilize google when you've forgotten the details.
+          </p>
+          <p>
+            <em>Attributes</em> are a proprty of an HTML element. For example, to set the attribute href to the anchor tag with the Udacity URL,
+            you would write &lta href="www.udacity.com"&gt
+          </p>
+      </div>
+      
+      <div class="lessons">
+        <h2>HTML Structure and DOM</h2>
+          <p>
+          HTML is the language of the web and it has syntax and rules. The structure of HTML is tree-like. The browser uses
+          HTML to create a Document Object Model (DOM). In Developer's Tools you can see the DOM the browser built from HTML.
+          Each HTML tag creates an element in the DOM that the browser uses to display the page.
+          </p>
+          <p>
+          The basic structure of an HTML document is as follows:
+            <p>
+            &lt!DOCTYPE html&gt <em>/*this tells the browser this is an HTML document</em>
+            <br>&lthtml&gt
+            <br>&lthead&gt
+            <br><em>/*this is where the link to the style file will be located. Text does not show up on browser</em>
+            <br>&lttitle&gt
+            <br>&lt/head&gt
+            <br>&ltbody>
+            <br><em>/*This is where content will go</em>
+            <br>&lt/body&gt
+            <br>&lt/html&gt
+            </p>
+            <p>
+            <b>Using Semantic Tags</b>
+            Make sure to choose the right type of element for certain parts of a page depending on what the purpose of that element is. e.g. 
+            the heading tag used for the heading of the page. <em>Search engines use headings to index the structure and contents of a web page.</em>  
+            </p>
+          </p>
+        <h3>Boxes</h3>
+          <p>
+          Everything on a webpage is contained in a box. Div tags define boxes and can have attributes. More on this later.
+          Just be aware that everything on a web page is made up of boxes.
+          </p>
+      </div>
+      
+      <div class="lessons">
+        <h2>CSS Styling and HTML Structure</h2>
+          <p>
+          Cascading Style Sheets (CSS) is the language that controls the style of HTML. 
+          CSS can either be put directly into HTML code or it can have its' own style sheet.
+          Generally, having a seperate style sheet is preferable to prevent repetition (Inheritance is an important concept in preventing repetition. 
+          More information can be found <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Inheritance">here</a>.)
+          <b>The link to the style sheet is placed in the &lthead&gt tag (see above).</b>
+          The code to link the style sheet is:
+            <br>
+            <br>&ltlink rel="stylesheet" type="text/css" href="filename.css"&gt
+          </p>
+          
+          <div class="sublesson">
+            <h3>Selectors</h3>
+              <p>
+              The biggest key to understanding CSS is understanding selectors.
+              Selectors are what allow you to target specific HTML elements and apply style to them.
+              For example:
+              <br>
+              <br> h1 {
+              <br> background-color: black;
+              <br>}
+              <br>
+              <br> In this example, everything in the h1 element would be affected. “background-color : black;” is a declaration
+              “background-color” is a property and “black” is the value of that property. Here is a link to various attributes that include
+              font style, colors, etc. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS Attribute Reference</a>
+              </p>
+          </div>
+          
+          <div class="sublesson">  
+            <h3>Selecting by Class</h3>
+              <p>
+              Classes are used to style a group of elements similarly. Let's use the analogy of a floorboard in a house. 
+              Each floorboard can represent an element and we want to assign all of these elements <b>class="floorboard" </b> where the floorboard styling rule will contain the color to be "brown."
+              If we want to style a special floorboard, such as a floorboard that creaks, we can use another class called "creak" and add in that additional style such as:
+              &ltdiv class="floorboard creaks"&gt
+              </p>
+              <p>
+              In the prior example the background of EVERY h1 will be black.
+              If we want to add style to a special h1, it will be necessary to use <em>Class Selectors.</em>
+              First set the HTML element to a class selector to match the CSS code.
+              <br> For example:
+              <br>
+              <br>
+              &ltdiv class=“h1-special”>text&lt/div&gt
+              <br>
+              <br>The CSS code will then be:
+              <br>
+              <br>.h1-special {
+              <br> attribute : value
+              <br>}
+              <br>
+              <br>Using the appropriate selector, you can apply rules to ALL div’s or just certain div’s, as in the above case.
+              Think of 
+            </p>
+          </div>
+          
+          <div class="sublesson">
+            <h3>Div, Span, ID & Class</h3>  
+              <p>
+                <ul>
+                  <li>Div is used to logically organize code, to group items together so styling to the whole block of code at once and avoid repetition.</li>
+                  <li>Span is used to style parts of the text or a few elements together w/out affecting the layout of the page.</li>
+                  <li>Ids are used to identify a unique element in the entire page. It should only be used sparingly because it slows down the browser. 
+                  With ids, anchor elements can be used to directly link the unique ID such as: &ltdiv id="creaks" class="floorboard"&gt
+                    <ul>  
+                      <li>
+                      It's recommended to use classes as much as possible in our HTML to style our elements because it's efficient for browsers to style 
+                      elements belonging to the same class and it makes our code easier to understand and maintain.</li>
+                    </ul>
+                  </li>  
+                </ul>
+              </p>
+          </div>
+          
+      <div class="lesson">
+        <h2>The Box Model</h2>
+          <p>
+          In Dev Tools, Computing tab, you’ll find a box.
+          <br> <img src="codepen/box.png">
+          <br>
+          Content is what shows up on the webpage, image or text. Think of the Content as the Nucleus and the other elements protect it and make the page appealing. 
+          Padding clears an area and protects the contents; is affected by the background color of the box.
+          Border goes around padding and content. Border is inherited from the color property of the box.
+          Margin clears the area around the border and doesn’t have a background color. Space between boxes.
+          By default the size of your element (box) is equal to the sum of the border, padding and contents widths.
+          </p>
+          <p>
+           In order to not have to re-calculate each time you change the value, use CSS styling:
+           <br>
+           {
+           <br>
+           box-sizing: border-box;
+           <br>
+           }
+          </p>
+          <p>
+          This makes the calculation of the element size include both the border and padding. You can just set the overall width of the box and no matter how you tweak the padding and border sizes the size of the box will always stay the same. Margin is not included however. So for older browsers you must add “browser specific prefixes. Add before the style definition.
+           <br>
+           {
+           <br>-webkit-box-sixing: border-box;
+		           <br>-moz-box-sizing: border
+		           <br>-ms-box-sizing: border-box;
+		           <br> box-sizing: border-box
+           <br>}
+          </p>
+        <div class="sublesson">
+          <h3>Box Sizing: Pixels vs. Percentages</h3>
+            <p>
+            Boxes can be defined in pixels or percentages.  If you set the box to percentages the size will change depending on how big the screen is or how encompassing the box is. If you set as a predefined # of pixels it will stay exactly the same and not change no matter how big or small the screen is - can lead to bad user experience.
+            </p>
+            <p>
+            You can also set a max width for the box. In that case it will resize and become smaller than necessary but not larger than the set max width. For example:
+                  .screenshot {
+                  <br>max-width:460px
+                  <br>}
+            </p>
+            
+          <p>
+              <em>4 Main Points:</em>
+              <ul>
+                <li>HTML elements are boxes and each box has 4 components.</li>
+                <li>Because there are so many components to each box, it can often be hard to get the size of a box just right.</li>
+                <li>There are two techniques you can use to help deal with sizing issues.
+                    <ul>
+                      <li>Set sizes in terms of percentages rather than pixels.</li>
+                      <li>Set the box-sizing attribute to border-box for every element.</li>
+                    </ul>
+                </li>
+                <li>Different browsers work slightly differently. Sometimes this causes different browsers to display the same code differently.</li>
+            </p>             
+        </div>
+        
+        <div class="sublesson">
+          <h3>Box Positioning</h3>
+          <p>
+            Divs are block elements (as opposed to inline), so by default they take up the entire width of a page. Adding the rule display: flex; to the appropriate CSS will override this behavior and let divs appear next to each other. For example:
+            <br>
+            <br>
+            .app {
+            <br>display: flex;
+            <br>}
+        </div>
+        
+        <div class="sublesson">
+          <h3>Code, Test, Refine</h3>
+            <ol>
+              <li>Look for natural boxes.</li>
+              <li>Look for repeated styles and semantic elements (h2’s should be the 2nd biggest heading etc.)</li>
+              <li>Write your HTML</li>
+              <li>Apply Style from biggest to smallest</li>
+              <li>Fix things (look in other browsers, repeat 3-5 until it looks as you like)</li>
+              <li>	You can also use the Dev Tools to test/change the page without having to change the HTML or CSS code. You just have to refresh the page to get back to the original code. You can then experiment until you get your desired result and then go back and change the HTML or CSS.</li>
+          </ol> 
+        </div>
+</body>
+</html>
+    
+    
+    
+    
+    
+  </body>
+</html>

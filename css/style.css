@@ -1,0 +1,38 @@
+
+body {
+	padding: 20px 150px;
+	font-family: Helvetica;
+	max-width:2000px;
+	margin: 0 auto;
+	font-size: 1.4em;
+
+}
+
+h1 {
+	text-align: center;
+	color: #000000
+}
+
+h2 {
+  text-align: center;
+  background-color: #dddddd
+    
+}
+.lessons {
+  padding: 10px 50px;
+  max-width:2000px;
+  text-align: justify;
+  background-color: #6e94a3 
+}
+
+.sublesson {
+  padding: 10px 35px;
+  max-width:2000px;
+  text-align: justify;
+  background-color: #CCCCCC 
+}
+
+h3 {
+  text-align: center;
+  
+}
